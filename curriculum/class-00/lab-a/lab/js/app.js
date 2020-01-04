@@ -6,7 +6,7 @@ const leftImage = document.getElementById('left');
 const centerImage = document.getElementById('center');
 const rightImage = document.getElementById('right');
 
-const allProducts = [];
+let allProducts = [];
 const container = document.getElementById('image_container');
 const viewed = [];
 const labels = [];
@@ -35,9 +35,8 @@ function displayPics(){
       viewed.push(rando);
     }
   }
-  console.log(rando);
-  // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the variable declaration from `const to `let`.
-  // PUT YOUR RESPONSE IN THIS COMMENT
+  // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the variable declaration from `const to `const`.
+  // Console log is trying to call a let or const from within a local scope instead of a global scope. Deleteing it fixed it since we cannot do that.
   console.log(viewed);
 
   for (const i = 0; i < 3; i++){
